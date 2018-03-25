@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4057175E2068109800CC2361 /* RandomColorTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4057175D2068109800CC2361 /* RandomColorTextFieldDelegate.swift */; };
 		4D08C4701A126D0300A95F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C46F1A126D0300A95F43 /* AppDelegate.swift */; };
 		4D08C4721A126D0300A95F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C4711A126D0300A95F43 /* ViewController.swift */; };
 		4D08C4751A126D0300A95F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D08C4731A126D0300A95F43 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4057175D2068109800CC2361 /* RandomColorTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomColorTextFieldDelegate.swift; sourceTree = "<group>"; };
 		4D08C46A1A126D0300A95F43 /* TextFields.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFields.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D08C46E1A126D0300A95F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D08C46F1A126D0300A95F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				4D08C48F1A126EC400A95F43 /* EmojiTextFieldDelegate.swift */,
 				4D08C4911A12860200A95F43 /* ColorizerTextFieldDelegate.swift */,
+				4057175D2068109800CC2361 /* RandomColorTextFieldDelegate.swift */,
 			);
 			name = "Text Field Delegates";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				4D08C4721A126D0300A95F43 /* ViewController.swift in Sources */,
 				4D08C4701A126D0300A95F43 /* AppDelegate.swift in Sources */,
 				4D08C4901A126EC400A95F43 /* EmojiTextFieldDelegate.swift in Sources */,
+				4057175E2068109800CC2361 /* RandomColorTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

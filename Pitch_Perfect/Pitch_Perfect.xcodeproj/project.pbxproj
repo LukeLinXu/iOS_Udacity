@@ -13,6 +13,7 @@
 		408824E52052295100678675 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408824E42052295100678675 /* Assets.xcassets */; };
 		408824E82052295100678675 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 408824E62052295100678675 /* LaunchScreen.storyboard */; };
 		408824F02055CD2300678675 /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408824EF2055CD2300678675 /* PlaySoundsViewController.swift */; };
+		408824F42055DBCB00678675 /* playsoundsviewcontroller-audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408824F32055DBCB00678675 /* playsoundsviewcontroller-audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		408824E72052295100678675 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		408824E92052295100678675 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		408824EF2055CD2300678675 /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
+		408824F32055DBCB00678675 /* playsoundsviewcontroller-audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "playsoundsviewcontroller-audio.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		408824DC2052295100678675 /* Pitch_Perfect */ = {
 			isa = PBXGroup;
 			children = (
+				408824F32055DBCB00678675 /* playsoundsviewcontroller-audio.swift */,
 				408824DD2052295100678675 /* AppDelegate.swift */,
 				408824DF2052295100678675 /* RecordSoundsViewController.swift */,
 				408824E12052295100678675 /* Main.storyboard */,
@@ -142,6 +145,7 @@
 				408824E02052295100678675 /* RecordSoundsViewController.swift in Sources */,
 				408824F02055CD2300678675 /* PlaySoundsViewController.swift in Sources */,
 				408824DE2052295100678675 /* AppDelegate.swift in Sources */,
+				408824F42055DBCB00678675 /* playsoundsviewcontroller-audio.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
