@@ -20,33 +20,69 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfn-nO-xaH">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZyJ-ab-ggy"/>
+                                </constraints>
                                 <items>
-                                    <barButtonItem title="Pick" id="dO2-qu-qxI">
+                                    <barButtonItem title="Pick From Lib" id="dO2-qu-qxI">
                                         <connections>
                                             <action selector="pickAnImage:" destination="BYZ-38-t0r" id="GbV-1N-a7J"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem title="Pick From Camera" id="c5w-H0-50W">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="f2j-8e-nGb"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nUU-i2-ake">
-                                <rect key="frame" x="67" y="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nUU-i2-ake">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r11-Jg-znk">
+                                <rect key="frame" x="16" y="99" width="343" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zUj-xT-lns">
+                                <rect key="frame" x="16" y="460" width="343" height="21"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Pfn-nO-xaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0h4-sH-pdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zUj-xT-lns" secondAttribute="trailing" constant="16" id="2RQ-gu-iNI"/>
+                            <constraint firstItem="nUU-i2-ake" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5ln-dW-MBx"/>
+                            <constraint firstItem="Pfn-nO-xaH" firstAttribute="top" secondItem="zUj-xT-lns" secondAttribute="bottom" constant="142" id="Bbd-fF-3zB"/>
+                            <constraint firstItem="Pfn-nO-xaH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Kg5-2q-xoS"/>
+                            <constraint firstItem="Pfn-nO-xaH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="L2h-ai-LsW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r11-Jg-znk" secondAttribute="trailing" constant="16" id="NFx-MX-Bvo"/>
+                            <constraint firstItem="r11-Jg-znk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QkO-ll-aO4"/>
+                            <constraint firstItem="r11-Jg-znk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="Qyu-jZ-QR5"/>
+                            <constraint firstItem="zUj-xT-lns" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="T2X-da-h1i"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pfn-nO-xaH" secondAttribute="bottom" id="ZQp-q5-lYP"/>
+                            <constraint firstItem="nUU-i2-ake" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aIF-R8-yIl"/>
+                            <constraint firstItem="Pfn-nO-xaH" firstAttribute="top" secondItem="nUU-i2-ake" secondAttribute="bottom" id="bVQ-rn-3xx"/>
+                            <constraint firstItem="nUU-i2-ake" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cT4-I5-nLM"/>
                             <constraint firstItem="Pfn-nO-xaH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="su1-iB-Lpt"/>
                             <constraint firstItem="Pfn-nO-xaH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yRn-a2-HH9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottom" destination="zUj-xT-lns" id="dxv-QT-l9R"/>
+                        <outlet property="cameraButton" destination="c5w-H0-50W" id="igM-RT-V72"/>
                         <outlet property="imagePickerView" destination="nUU-i2-ake" id="9aM-4r-ezj"/>
+                        <outlet property="top" destination="r11-Jg-znk" id="EIp-6T-cZ9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
