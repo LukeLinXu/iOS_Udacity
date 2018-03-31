@@ -18,7 +18,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottom: UITextField!
     @IBOutlet weak var top: UITextField!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var imagePickerView: UIImageView!
+    @IBOutlet weak var imagePickerView: UIBarButtonItem!
+    @IBOutlet weak var shareBtn: UIBarButtonItem!
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
