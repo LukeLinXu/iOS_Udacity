@@ -55,7 +55,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="2zL-rO-EFU">
-                                        <barButtonItem key="leftBarButtonItem" title="Share" id="U7k-zG-J7B" userLabel="ShareBtn"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Share" id="U7k-zG-J7B" userLabel="ShareBtn">
+                                            <connections>
+                                                <action selector="shareAction:" destination="BYZ-38-t0r" id="qcn-0p-GAj"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -86,7 +90,8 @@
                     <connections>
                         <outlet property="bottom" destination="zUj-xT-lns" id="dxv-QT-l9R"/>
                         <outlet property="cameraButton" destination="c5w-H0-50W" id="igM-RT-V72"/>
-                        <outlet property="imagePickerView" destination="dO2-qu-qxI" id="OZM-tq-GCg"/>
+                        <outlet property="imagePickerView" destination="nUU-i2-ake" id="I93-9S-EHH"/>
+                        <outlet property="libButton" destination="dO2-qu-qxI" id="hAv-WR-vsA"/>
                         <outlet property="shareBtn" destination="U7k-zG-J7B" id="ICT-tR-kCs"/>
                         <outlet property="toolBar" destination="Pfn-nO-xaH" id="SHk-uX-b82"/>
                         <outlet property="top" destination="r11-Jg-znk" id="EIp-6T-cZ9"/>

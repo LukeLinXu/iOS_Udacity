@@ -18,7 +18,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var bottom: UITextField!
     @IBOutlet weak var top: UITextField!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
-    @IBOutlet weak var imagePickerView: UIBarButtonItem!
+    @IBOutlet weak var libButton: UIBarButtonItem!
+    @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var shareBtn: UIBarButtonItem!
     @IBOutlet weak var toolBar: UIToolbar!
     
@@ -36,6 +37,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         top.defaultTextAttributes = memeTextAttributes
         bottom.textAlignment = .center
         top.textAlignment = .center
+        shareBtn.isEnabled = false
         subscribeToKeyboardNotifications()
     }
     
@@ -77,6 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = image
+            shareBtn.isEnabled = true
         }
     }
     
@@ -109,10 +112,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.cgRectValue.height
     }
     
-    func save() {
+    func save(memedImage: UIImage) -> Meme{
         // Create the meme
-        let memedImage = generateMemedImage()
         let meme = Meme(textTop: top.text!, textBottom: bottom.text!, imageOriginal: imagePickerView.image!, imageMemed: memedImage)
+        return meme
     }
     
     func generateMemedImage() -> UIImage {
@@ -128,6 +131,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // TODO: Show toolbar and navbar
         
         return memedImage
+    }
+    @IBAction func shareAction(_ sender: Any) {
+        let image = generateMemedImage() ;
+        let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        controller.completionWithItemsHandler = { (activityType, completed, returnedItems, activityError) -> () in
+            if (completed) {
+                self.save(memedImage: image)
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
+        
+        present(controller, animated: true, completion: nil)
     }
 }
 
